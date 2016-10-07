@@ -1,0 +1,29 @@
+  var enemy = {
+...   _name: 'bichos',
+...   life: 200,
+...   _weapon: { kind: 'laser cannon', power:75},
+...   _defense: {kind: 'shield', power: 25},
+...   _graphic: 'randomEnemy.png',
+...   _currentDirection: 'right',
+...   _position: { x: 10, y: 20 },
+...
+...
+...   moveLeft: function () { this._position.x -=2;},
+...   moveRight: function () { this._position.x +=2;},
+...   advance: function () {this._position.y+=2;},
+...   shoot: function () {console.log('disparo');}
+... };
+ var spaceship = {
+...  _name: 'Milano',
+...  life: 1000,
+...  _weapon: { kind: 'plasma cannon', power: 200},
+...  _defense: { kind: 'shield', power: 125},
+...  _graphic: 'randomImage.png',
+...  _position: { x: 10, y :10 },
+...  moveLeft: function () { this._position.x -=2;},
+...  moveRight: function () { this._position.x +=2;},
+...  advance: function () {this._position.y+=2;},
+...  shoot: function () {console.log('disparo');}
+...  };
+> spaceship.shoot = function () {console.log('PIUM')}; /*aqui iria la instruccion que invocaria al disparo, estando este ya definido (imagen, la posicion justouna unidad por delnate de quien lo invoque en este caso el enemigo) Esta escrito de esta manera ya que no tengo conocimiento de como hacer la invocacion de un objeto en JS */
+[Function]
